@@ -15,12 +15,12 @@ class Perhitungan extends CI_Controller
 
     public function proses_hitung()
     {
-        $kalimat = $_POST['judul'];
+        echo $kalimat = $_POST['judul'];
 
         // Tahap Text Preprocessing
 
         // 1. Tahap Case Folding
-        $case_folding = strtolower($kalimat);
+        // $case_folding = strtolower($kalimat);
 
 
         // 2. Tahap Tokenizing
@@ -28,18 +28,18 @@ class Perhitungan extends CI_Controller
 
         $hasil_explode = explode(' ', $kalimat);
 
-        // echo "<pre>";
-        // print_r($hasil_explode);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r($hasil_explode);
+        echo "</pre>";
         $i = 0;
         $perkata = array();
         foreach ($hasil_explode as $key => $value) {
             array_push($perkata, ["kata" => strtolower(preg_replace("/[^a-zA-Z]/", "", $value))]);
         }
 
-        // echo "<pre>";
-        // print_r($perkata);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r($perkata);
+        echo "</pre>";
 
 
         // 3. Proses Filter
@@ -51,7 +51,7 @@ class Perhitungan extends CI_Controller
                 // array_push($kata_filter,['kata_filter'=>$key['kata']]);
             }
         }
-        $kalimat_sudah_di_filter;
+        echo $kalimat_sudah_di_filter;
         // echo "<pre>";
         // print_r($kata_filter);
         // echo "</pre>";
@@ -68,9 +68,9 @@ class Perhitungan extends CI_Controller
             array_push($pkata, ['kata' => $kata]);
         }
 
-        // echo "<pre>";
-        // print_r($pkata);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r($pkata);
+        echo "</pre>";
         $kata_hash1 = array();
         foreach ($pkata as $dt) {
             $n = 1;
@@ -89,9 +89,9 @@ class Perhitungan extends CI_Controller
             array_push($kata_hash1, ['kata' => $dt['kata'], "hash" => $mod]);
         }
 
-        // echo "<pre>";
-        // print_r($kata_hash1);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r($kata_hash1);
+        echo "</pre>";
 
         $data_judul = $this->hitung->ambil_data_judul()->result();
         // echo "<pre>";
@@ -180,9 +180,9 @@ class Perhitungan extends CI_Controller
             echo "<pre>";
         print_r($kata_hash);
         echo "</pre>";
-        echo "<pre>";
-        print_r($kata_hash1);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r($kata_hash1);
+        // echo "</pre>";
         }
     }
 }

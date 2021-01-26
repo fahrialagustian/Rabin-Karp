@@ -28,8 +28,7 @@
 
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
-		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-		   aria-controls="collapseTwo">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
 			<i class="fas fa-fw fa-cog"></i>
 			<span>Rabin Krap</span>
 		</a>
@@ -37,7 +36,7 @@
 			<div class="bg-white py-2 collapse-inner rounded">
 				<h6 class="collapse-header">Data Kasus</h6>
 				<a class="collapse-item" href="<?php echo site_url('perhitungan') ?>">Cek Judul</a>
-				<a class="collapse-item" href="<?php echo site_url('bayes_training') ?>">Data Pengajuan Judul</a>
+				<a class="collapse-item" href="<?php echo site_url('pengajuan') ?>">Data Pengajuan Judul</a>
 			</div>
 		</div>
 	</li>
@@ -51,8 +50,7 @@
 
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
-		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-		   aria-controls="collapsePages">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
 			<i class="fas fa-fw fa-folder"></i>
 			<span>Data Pendukung</span>
 		</a>
@@ -60,9 +58,12 @@
 			<div class="bg-white py-2 collapse-inner rounded">
 				<h6 class="collapse-header">Algoritma</h6>
 				<!--				<a class="collapse-item" href="-->
-				<?php //echo site_url('data_mahasiswa_training/') ?><!--">Data Training</a>-->
-				<a class="collapse-item" href="<?php echo site_url('kriteria_algoritma/') ?>">Data Mahasiswa</a>
-				<a class="collapse-item" href="<?php echo site_url('kategori/') ?>">Data Judul</a>
+				<?php //echo site_url('data_mahasiswa_training/') 
+				?>
+				<!--">Data Training</a>-->
+				<a class="collapse-item" href="<?php echo site_url('mahasiswa/') ?>">Data Mahasiswa</a>
+				<a class="collapse-item" href="<?php echo site_url('judul/') ?>">Data Judul</a>
+				<a class="collapse-item" href="<?php echo site_url('jurusan/') ?>">Data Jurusan</a>
 			</div>
 		</div>
 	</li>
